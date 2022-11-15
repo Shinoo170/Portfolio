@@ -8,7 +8,6 @@ import { FaFacebook, FaGithub } from 'react-icons/fa'
 import { resolve } from "styled-jsx/css"
 
 export default function Portfolio() {
-	const [videoState, setVideoState] = useState('red')
 	const [ showNavbar, setShowNavbar ] = useState(true)
 	const [ openNavbar, setOpenNavbar ] = useState(false)
 	const navbar = useRef()
@@ -22,16 +21,17 @@ export default function Portfolio() {
 
 	useEffect(()=> {
 		// video.current.play()
+		let videoState = 'red'
 		const changeVideoHandle = () => {
 			if(videoState === 'red'){
 				video.current.src = 'ink_drop_blue.mp4'
-				setVideoState('blue')
+				videoState = 'blue'
 			} else {
 				video.current.src = 'ink_drop_red.mp4'
-				setVideoState('red')
+				videoState = 'red'
 			}
 		}
-		video.current.addEventListener('ended',changeVideoHandle)
+		video.current.addEventListener('ended', changeVideoHandle)
 
 		var previousY = 0
 		window.onscroll = function() {
@@ -207,7 +207,7 @@ export default function Portfolio() {
 							{/* <div id='frontend-label'>Ea esse dolor ullamco ad enim quis deserunt eiusmod tempor fugiat consectetur voluptate exercitation.</div>
 							<div id='backend-label'>Ea culpa esse ut cillum sunt et cupidatat veniam cillum sint.</div>
 							<div id='database-label'>Irure commodo nulla excepteur magna.</div> */}
-							<div>I'm expert in Java and NodeJS. I've been working on a database for simulated cryptocurrency trading websites using MySql and a bookstore using MongoDB.</div>
+							<div>I'm expert in Java and NodeJS. I've been working on a database for simulated cryptocurrency trading websites using PHP and MySql, bookstore using React NodeJS and MongoDB.</div>
 						</div>
 						<div className={styles.skillControls}>
 							<div ref={skillNav} className={styles.skillNav} onClick={changeSkill}>
