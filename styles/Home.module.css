@@ -241,13 +241,10 @@
   transform: translateX(0%);
 }
 
-.skillGroup {
-  padding-right: 10px;
-}
-
 .progressContainer {
   display: flex;
   padding: 5px 0;
+  width: 540px;
 }
 
 .progressTitle {
@@ -451,14 +448,17 @@
     flex-direction: column;
   }
   .skillControls {
-    max-width: 100%;
+    max-width: calc(100vw - 100px);
   }
   .skillDetails {
     width: calc(100vw - 100px);
-    max-width: 100%;
+    max-width: calc(100vw - 100px);
+  }
+  .progressContainer {
+    width: calc(100vw - 100px);
   }
   .progressBar {
-    width: calc(100vw - 100px - 130px - 10px);
+    width: calc(100vw - 100px - 130px - 30px);
   }
 }
 
@@ -520,9 +520,18 @@
   .progressContainer {
     flex-direction: column;
     padding: 10px 0;
+    width: calc(100vw - 20px);
+    max-width: calc(100vw - 20px);
+  }
+  .skillControls {
+    max-width: calc(100vw - 20px);
+  }
+  .skillDetails {
+    width: calc(100vw - 20px);
+    max-width: calc(100vw - 20px);
   }
   .progressBar {
-    width: calc(100vw - 100px - 10px);
+    width: calc(100vw - 100px - 30px);
   }
   .cardContainer {
     padding: 40px 20px;
@@ -534,14 +543,7 @@
     padding: 50px 10px;
   }
   .mySkill {
-    padding: 50px 10px;
-  }
-  .skillDetails {
-    width: calc(100vw - 20px);
-    max-width: 100%;
-  }
-  .progressBar {
-    width: calc(100vw - 20px - 10px);
+    padding: 50px 20px;
   }
   .skillNav {
     flex-wrap: wrap;
@@ -549,6 +551,21 @@
   .card .btnGroup {
     flex-wrap: wrap;
   }
+  .skillControls {
+    max-width: calc(100vw - 40px);
+  }
+  .skillDetails {
+    width: calc(100vw - 40px);
+    max-width: calc(100vw - 40px);
+  }
+  .progressContainer {
+    width: calc(100vw - 40px);
+    max-width: calc(100vw - 40px);
+  }
+  .progressBar {
+    width: calc(100vw - 40px - 20px);
+  }
+
   .contractDetails {
     overflow-wrap: anywhere;
     padding: 0 20px;
